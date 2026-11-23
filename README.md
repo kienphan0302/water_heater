@@ -34,7 +34,7 @@ Các lệnh trên không ghi vào D1 Cloudflare.
 
 ## Triển khai độc lập
 
-Tạo hai D1 mới: `water-heater-leads` cho production và `water-heater-leads-preview` cho bản thử. Điền UUID do Cloudflare cấp:
+Website đang hoạt động tại **https://water-heater-e3j.pages.dev/**. Hai D1 `water-heater-leads` (production) và `water-heater-leads-preview` đã được cấu hình bằng UUID riêng trong `wrangler.jsonc`. Chỉ dùng lệnh sau khi cần đổi sang tài nguyên Cloudflare khác:
 
 ```bash
 npm run cloudflare:configure -- --production-id UUID_PRODUCTION --preview-id UUID_PREVIEW
@@ -42,7 +42,7 @@ npm run cloudflare:configure -- --production-id UUID_PRODUCTION --preview-id UUI
 
 Nếu tên Pages thực tế khác `water-heater`, thêm `--project-name TEN_DU_AN_THUC_TE` vào lệnh trên.
 
-Tạo Pages project mới kết nối **repo này**, nhánh `main`, build command **`npm run build:cloudflare`**, output **`dist`**, Node **`24`**. Bản mã nguồn này không trỏ tới D1 điện mặt trời. Build triển khai sẽ dừng khi chưa nhập hai UUID riêng.
+Pages project hiện tại kết nối **repo này**, nhánh `main`, build command **`npm run build:cloudflare`**, output **`dist`**, Node **`24`**. Bản mã nguồn này không trỏ tới D1 điện mặt trời. Build triển khai sẽ dừng khi hai UUID không hợp lệ hoặc không độc lập.
 
 Hướng dẫn từng bước: [docs/deploy.md](docs/deploy.md). Đánh giá các thành phần: [docs/architecture.md](docs/architecture.md).
 
@@ -56,7 +56,9 @@ Hướng dẫn từng bước: [docs/deploy.md](docs/deploy.md). Đánh giá cá
 | Màu sắc, bố cục | `src/styles/global.css` |
 | Cẩm nang | `src/data/articles.ts` |
 
-Tên mặc định là “Bình Nóng Lạnh”; thông tin liên hệ chưa xác nhận nên để trống. Tài khoản quản trị GA4/GTM do chủ website chỉ định; mã theo dõi mới chỉ được nhập sau khi tạo và xác minh.
+Tên website là “Bình Nóng Lạnh”. Chủ website đã xác nhận dùng thông tin doanh nghiệp và liên hệ Hướng Dương Solar ngày 23/11/2026: hotline/Zalo `0385 195 555`, email công khai `huongduongsolar8386@gmail.com`, địa chỉ Hà Nội và TP.HCM trong cấu hình. Đây không phải thông tin liên hệ của website nguồn danh mục.
+
+GTM đang dùng `GTM-PQ74L8GW`, GA4 `G-XYT2ZXR5WL`. Trạng thái và các bước hoàn tất đo chuyển đổi: [docs/tracking.md](docs/tracking.md). Email nhận lead cần cấu hình riêng, không tự hoạt động từ email hiển thị trên trang.
 
 ## Cập nhật danh mục
 

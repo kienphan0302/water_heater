@@ -13,7 +13,9 @@ Hai D1 đã có UUID thực tế trong `wrangler.jsonc`:
 
 Không tạo lại tài nguyên đã tồn tại. Các bước bên dưới phục vụ đối chiếu, khởi tạo schema còn thiếu hoặc dựng lại khi cần. Chưa xác minh email thông báo được cấu hình và chưa thực hiện phép thử ghi lead production.
 
-Bản thử cũ ở nhánh `website/binh-nong-lanh-20261123` của `solar_power` cần chuyển hướng sang Pages mới và ngừng API ghi D1 điện mặt trời. Không merge nhánh đó vào `main` của điện mặt trời. Giữ dữ liệu cũ để đối chiếu, không tự xóa hoặc di chuyển dữ liệu khách.
+Bản thử cũ ở nhánh `website/binh-nong-lanh-20261123` của `solar_power` đã triển khai chuyển hướng 302 sang Pages mới; API cũ trả 410 và cấu hình nhánh đã bỏ D1 binding. Không merge nhánh đó vào `main` của điện mặt trời. Giữ dữ liệu cũ để đối chiếu, không tự xóa hoặc di chuyển dữ liệu khách. Các deployment bất biến tạo trước khi ngừng bản thử vẫn cần được rà soát riêng trong Cloudflare; cập nhật nhánh không thu hồi các URL cũ đó.
+
+Đã kiểm tra chỉ đọc trên Pages production: `databaseStatus: ready`, canonical là URL ổn định, GTM bình nóng lạnh riêng. `notificationsReady: false`; email thông báo chưa hoạt động.
 
 ## 1. Tạo D1 riêng
 
