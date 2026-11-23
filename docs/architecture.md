@@ -8,7 +8,7 @@ Mục tiêu: hai website marketing nhận yêu cầu tư vấn, dễ cập nhậ
 | Mã nguồn | `solar_power` và `water_heater` | Lịch sử, phát hành và phân quyền riêng |
 | Giao diện | Giữ Astro; ảnh WebP trong từng repo | Phù hợp danh mục/marketing; chưa cần CMS |
 | Hosting/API | Mỗi repo một Pages project | Build, domain, binding và rollback riêng |
-| Dữ liệu khách | Giữ `solar-leads`, tạo `water-heater-leads` | Tránh đọc/ghi chéo và dễ sao lưu riêng |
+| Dữ liệu khách | `solar-leads` và `water-heater-leads` riêng | Tránh đọc/ghi chéo và dễ sao lưu riêng |
 | Kiểm thử bình nóng lạnh | D1 `water-heater-leads-preview` | Form thử không tạo khách giả trong production |
 | Email | Có thể cùng nhà cung cấp, cấu hình và người nhận riêng | Phân biệt hai luồng khách |
 | GA4/GTM | Tạo mới cho cả hai web, property/container riêng | Theo lựa chọn của chủ website; tránh trộn báo cáo |

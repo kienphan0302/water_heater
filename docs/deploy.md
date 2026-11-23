@@ -2,7 +2,18 @@
 
 ## Trạng thái cấu hình
 
-Repo đích là `kienphan0302/water_heater`, nhánh `main`. Bản mã nguồn này đã bỏ binding D1 điện mặt trời. Chưa có UUID của hai D1 mới; chưa xác minh dự án Pages riêng được tạo. Bản thử cũ ở nhánh `website/binh-nong-lanh-20261123` của `solar_power` vẫn là hệ thống thử trước khi tách. Không merge nhánh đó vào `main` của điện mặt trời.
+Repo đang triển khai là `kienphan0302/water_heater`, nhánh `main`. Dự án Pages riêng đã hoạt động tại **https://water-heater-e3j.pages.dev/**. Solar tiếp tục dùng **https://solar-power-5w7.pages.dev/** từ repo `solar_power`.
+
+Hai D1 đã có UUID thực tế trong `wrangler.jsonc`:
+
+| Môi trường | D1 | Database ID |
+| --- | --- | --- |
+| Production | `water-heater-leads` | `0739d172-362d-4366-bc8e-17a829fb5aa1` |
+| Preview | `water-heater-leads-preview` | `c719ab23-25ce-4e1a-9948-f9754640feac` |
+
+Không tạo lại tài nguyên đã tồn tại. Các bước bên dưới phục vụ đối chiếu, khởi tạo schema còn thiếu hoặc dựng lại khi cần. Chưa xác minh email thông báo được cấu hình và chưa thực hiện phép thử ghi lead production.
+
+Bản thử cũ ở nhánh `website/binh-nong-lanh-20261123` của `solar_power` cần chuyển hướng sang Pages mới và ngừng API ghi D1 điện mặt trời. Không merge nhánh đó vào `main` của điện mặt trời. Giữ dữ liệu cũ để đối chiếu, không tự xóa hoặc di chuyển dữ liệu khách.
 
 ## 1. Tạo D1 riêng
 
@@ -32,7 +43,7 @@ Cloudflare → **Workers & Pages → Create application → Pages → Connect to
 | Mục | Cấu hình |
 | --- | --- |
 | Repository | `kienphan0302/water_heater` |
-| Project name | `water-heater` hoặc tên Cloudflare chấp nhận |
+| Project name | `water-heater` (URL thực tế `water-heater-e3j.pages.dev`) |
 | Production branch | `main` |
 | Root directory | Gốc repo |
 | Build command | `npm run build:cloudflare` |
@@ -48,8 +59,8 @@ Wrangler là nguồn cấu hình D1. Binding của ứng dụng là `DB` ở c�
 | Tên | Mục đích |
 | --- | --- |
 | `NODE_VERSION` | `24` |
-| `PUBLIC_WATER_HEATER_SITE_URL` | URL chính thức thực tế cho canonical/sitemap |
-| `PUBLIC_WATER_HEATER_GTM_ID` | GTM mới của riêng website bình nóng lạnh |
+| `PUBLIC_WATER_HEATER_SITE_URL` | `https://water-heater-e3j.pages.dev` hiện tại; đổi khi có custom domain |
+| `PUBLIC_WATER_HEATER_GTM_ID` | `GTM-PQ74L8GW` |
 | `PUBLIC_SITE_READY_TO_INDEX` | `false` khi chưa chốt nội dung/domain; `true` ở production khi hoàn tất |
 | `PUBLIC_WATER_HEATER_TURNSTILE_SITE_KEY` | Site key nếu bật Turnstile |
 | `WATER_HEATER_TURNSTILE_SECRET_KEY` | Secret tương ứng, lưu dưới dạng secret |
@@ -62,8 +73,8 @@ Preview dùng cấu hình email kiểm thử riêng. Gmail quản trị GA4/GTM 
 ## 4. Kiểm tra và chuyển hệ thống
 
 1. Mở trang chủ, danh mục và trang chi tiết trên URL mới, kiểm tra giao diện điện thoại.
-2. Mở `/api/health`: `formReady` phải là `true`. `notificationsReady` chỉ là `true` khi đã cấu hình đủ email.
-3. Gửi form tên `[TEST]`, kiểm tra dòng mới chỉ xuất hiện trong D1 bình nóng lạnh.
+2. Mở `/api/health`: `formReady` phải là `true`, `databaseStatus` là `ready`. Endpoint xác thực các cột bằng truy vấn `LIMIT 0`, không đọc dòng khách hoặc ghi dữ liệu. Trả HTTP 503 khi thiếu binding/schema hoặc D1 không truy cập được. `notificationsReady` chỉ phản ánh đủ biến cấu hình email, không chứng minh gửi email thành công.
+3. Thử form tên `[TEST]` trong preview và kiểm tra dòng chỉ xuất hiện trong D1 preview. Chỉ ghi thử production khi chủ website cho phép rõ ràng; kiểm thử unit dùng mock không thay thế hoàn toàn phép thử tích hợp.
 4. Kiểm tra nhánh preview dùng D1 preview, khác D1 production.
 5. Chỉ sau các bước trên mới đổi liên kết/domain và ngừng form ở bản thử cũ.
 
@@ -84,3 +95,9 @@ Sau khi URL mới hoạt động đúng, chuyển bản thử cũ thành trang c
 ## 6. GA4 và Tag Manager mới cho cả hai website
 
 Theo lựa chọn của chủ website ngày 23/11/2026: dùng tài khoản Google do chủ website chỉ định, tạo mới GA4/GTM cho cả hai web. Mỗi website có property GA4 và container GTM riêng. Hướng dẫn và bảng mã: [tracking.md](tracking.md).
+
+## 7. Pipeline build bị trùng
+
+Đã quan sát cùng một commit có **Cloudflare Pages thành công** và **Workers Builds: water-heater thất bại**. Kiến trúc này triển khai qua Pages; trong Cloudflare, kiểm tra Worker `water-heater` và ngắt build Git tự động của riêng Worker bị tạo trùng sau khi xác nhận không có luồng nào cần nó. Giữ dự án Pages, D1 và quyền GitHub App của cả hai repo. Không đổi Pages thành `wrangler deploy` để chữa dấu kiểm Workers.
+
+Canonical mặc định dùng URL Pages ổn định, không dùng `CF_PAGES_URL` vì biến đó có thể là URL của một bản build. Khi thêm domain, cập nhật `PUBLIC_WATER_HEATER_SITE_URL` rồi build lại.
