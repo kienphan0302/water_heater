@@ -1,3 +1,4 @@
+
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "water-heater",
@@ -6,12 +7,19 @@
   "d1_databases": [
     {
       "binding": "DB",
-      "database_name": "water-heater-leads"
+      "database_name": "water-heater-leads",
+      "database_id": "ac352350-4d00-4f82-bba7-3bf2309a7440"
     }
   ],
   "env": {
     "preview": {
-      "d1_databases": [{ "binding": "DB", "database_name": "water-heater-leads-preview" }]
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "water-heater-leads-preview",
+          "database_id": "0739d172-362d-4366-bc8e-17a829fb5aa1"
+        }
+      ]
     }
   }
 }
