@@ -1,0 +1,6 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageIntro from '../components/PageIntro.astro';
+import { site } from '../config/site';
+---
+<BaseLayout title={`Thông tin bảo hành | ${site.shortBrand}`}><PageIntro title="Thông tin bảo hành sản phẩm." eyebrow="HỖ TRỢ KHÁCH HÀNG" description="Đối chiếu chính sách theo đúng model, chứng từ và nội dung được xác nhận khi mua sản phẩm."/><article class="section container prose"><section><h2>Chính sách theo từng model</h2><p>Thời hạn và phạm vi bảo hành được xác nhận theo sản phẩm, bộ phận, nhà sản xuất và chứng từ cung cấp. Thông tin trên trang sản phẩm là nội dung tham khảo trong danh mục; hồ sơ mua hàng và chính sách áp dụng tại thời điểm cung cấp là căn cứ để đối chiếu.</p></section><section><h2>Thông tin cần chuẩn bị</h2><p>Khi cần hỗ trợ, hãy chuẩn bị tên model, số sê-ri nếu có, chứng từ mua hàng, ngày lắp đặt và mô tả hiện tượng. Hình ảnh tem sản phẩm và vị trí lắp đặt có thể giúp quá trình trao đổi rõ ràng hơn.</p></section><section><h2>Tiếp nhận và trao đổi phương án</h2><p>Gửi thông tin qua các kênh liên hệ trên website. Phương án kiểm tra, lịch hẹn và các chi phí ngoài phạm vi bảo hành, nếu có, được trao đổi trước khi thực hiện.</p></section><a class="button" href="/lien-he/">Liên hệ hỗ trợ</a></article></BaseLayout>

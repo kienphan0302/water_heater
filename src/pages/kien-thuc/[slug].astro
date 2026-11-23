@@ -1,0 +1,9 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageIntro from '../../components/PageIntro.astro';
+import { articles } from '../../data/articles';
+import { site } from '../../config/site';
+export function getStaticPaths(){return articles.map(article=>({params:{slug:article.slug},props:{article}}));}
+const {article}=Astro.props;
+---
+<BaseLayout title={`${article.title} | ${site.shortBrand}`} description={article.excerpt}><PageIntro title={article.title} eyebrow={article.eyebrow} description={article.excerpt}/><article class="section container prose">{article.sections.map(section=><section><h2>{section.title}</h2><p>{section.text}</p></section>)}<a class="button" href="/lien-he/#tu-van">Trao đổi về sản phẩm bạn quan tâm</a></article></BaseLayout>

@@ -1,0 +1,33 @@
+---
+import type { Product } from '../data/catalog';
+interface Props { product?: Product; }
+const { product } = Astro.props;
+const sitekey = import.meta.env.PUBLIC_WATER_HEATER_TURNSTILE_SITE_KEY || '';
+---
+<div class="form-panel"><p class="eyebrow">TRAO ĐỔI NHU CẦU</p><h3>Đăng ký nhận tư vấn</h3><p class="form-intro">Để lại số điện thoại và khu vực dự kiến lắp đặt.</p>
+<form id="lead-form" class="lead-form" method="post" action="/api/lead" data-turnstile={sitekey ? 'required' : ''} data-product-path={product ? `/binh-nong-lanh/san-pham/${product.slug}/` : '/binh-nong-lanh/'}>
+  {product && <div class="form-product"><span>Sản phẩm bạn quan tâm</span><strong>{product.name}</strong></div>}
+  <label>Số điện thoại <span class="required-label">bắt buộc</span><input type="tel" name="phone" autocomplete="tel" inputmode="tel" required maxlength="30" placeholder="Nhập số điện thoại liên hệ"/></label>
+  <label>Khu vực lắp đặt <span class="required-label">bắt buộc</span><input type="text" name="area" autocomplete="address-level2" required minlength="2" maxlength="160" placeholder="Quận/huyện, tỉnh/thành"/></label>
+  <label>Họ tên<input type="text" name="name" autocomplete="name" maxlength="100" placeholder="Tên để tiện trao đổi"/></label>
+  <div class="honeypot" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"/></label></div>
+  <label class="consent"><input type="checkbox" name="consent" required/><span>Tôi đồng ý để đơn vị liên hệ về yêu cầu này theo <a href="/chinh-sach-bao-mat/">chính sách bảo mật</a>.</span></label>
+  {sitekey && <div class="cf-turnstile" data-sitekey={sitekey} data-theme="light" data-size="flexible"></div>}
+  <button class="button button-full" type="submit">Gửi yêu cầu tư vấn</button>
+  <p id="form-status" role="status" aria-live="polite"></p>
+  <noscript><p>Vui lòng bật JavaScript để gửi biểu mẫu hoặc sử dụng thông tin liên hệ trên trang.</p></noscript>
+</form></div>
+{sitekey && <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" is:inline async defer></script>}
+<script>
+  import { campaignForPage } from '../scripts/campaign';
+  const form=document.querySelector<HTMLFormElement>('#lead-form');const status=document.querySelector<HTMLElement>('#form-status');const button=form?.querySelector<HTMLButtonElement>('button[type="submit"]');
+  const w=window as Window&{turnstile?:{reset:()=>void};dataLayer?:Record<string,unknown>[]};let submissionId=crypto.randomUUID();
+  form?.addEventListener('submit',async event=>{
+    event.preventDefault();if(!button||!status)return;const data=new FormData(form);const token=data.get('cf-turnstile-response');
+    if(form.dataset.turnstile&&!token){status.textContent='Vui lòng chờ xác minh hoàn tất rồi gửi lại.';return;}
+    button.disabled=true;button.textContent='Đang gửi…';status.textContent='';status.className='';let previous:Record<string,string>={};try{previous=JSON.parse(sessionStorage.getItem('water_heater_campaign')||'{}');}catch{}
+    try{const response=await fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({id:submissionId,name:data.get('name'),phone:data.get('phone'),area:data.get('area'),consent:data.get('consent')==='on',website:data.get('website'),token,source_path:form.dataset.productPath||'/binh-nong-lanh/',...campaignForPage(location.search,previous)}),signal:AbortSignal.timeout(15000)});const result=await response.json();if(!response.ok||!result.success)throw new Error(result.message||'Chưa gửi được yêu cầu. Vui lòng thử lại.');status.textContent=result.message;status.className='success';if(result.created)(w.dataLayer||=[]).push({event:'generate_lead',lead_id:result.id,form_name:'water_heater_consultation',page_path:location.pathname});form.reset();submissionId=crypto.randomUUID();}
+    catch(error){status.textContent=error instanceof Error&&error.name!=='TimeoutError'?error.message:'Kết nối bị gián đoạn. Vui lòng thử lại.';status.className='error';}
+    finally{button.disabled=false;button.textContent='Gửi yêu cầu tư vấn';w.turnstile?.reset();}
+  });
+</script>

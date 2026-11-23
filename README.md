@@ -56,7 +56,7 @@ Hướng dẫn từng bước: [docs/deploy.md](docs/deploy.md). Đánh giá cá
 | Màu sắc, bố cục | `src/styles/global.css` |
 | Cẩm nang | `src/data/articles.ts` |
 
-Tên mặc định là “Bình Nóng Lạnh”; thông tin liên hệ chưa xác nhận nên để trống. Tài khoản quản trị GA4/GTM được yêu cầu là `kienithyn0302@gmail.com`; mã theo dõi mới chỉ được nhập sau khi tạo và xác minh.
+Tên mặc định là “Bình Nóng Lạnh”; thông tin liên hệ chưa xác nhận nên để trống. Tài khoản quản trị GA4/GTM do chủ website chỉ định; mã theo dõi mới chỉ được nhập sau khi tạo và xác minh.
 
 ## Cập nhật danh mục
 

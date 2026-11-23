@@ -1,0 +1,62 @@
+{
+  "id": 654,
+  "slug": "may-nuoc-nong-nang-luong-mat-troi-okayama-300-lit",
+  "name": "Máy nước nóng năng lượng mặt trời Okayama 300 lít",
+  "categoryKey": "may-nuoc-nong",
+  "categories": [
+    {
+      "key": "may-nuoc-nong-nang-luong-mat-troi-okayama",
+      "name": "MÁY NƯỚC NÓNG NĂNG LƯỢNG MẶT TRỜI OKAYAMA",
+      "sourceUrl": "https://tana-daithanh.com/danh-muc/may-nuoc-nong-nang-luong-mat-troi-okayama/"
+    }
+  ],
+  "brand": "Okayama",
+  "price": 9980000,
+  "priceMax": 9980000,
+  "regularPrice": 13790000,
+  "currency": "VND",
+  "summary": "Máy nước nóng năng lượng mặt trời dung tích 300L – 28 ống thủy tinh chân không F58, dòng Okayama. Vật liệu được công bố: Inox 304 – công nghệ Nhật Bản.",
+  "specs": [
+    {
+      "label": "Model",
+      "value": "Oka 58-28"
+    },
+    {
+      "label": "Kích thước",
+      "value": "Dài x rộng x cao(mm)= 2000 x 2370 x 1150"
+    },
+    {
+      "label": "Dung tích",
+      "value": "300L – 28 ống thủy tinh chân không F58"
+    },
+    {
+      "label": "Dùng cho",
+      "value": "10-12 người"
+    },
+    {
+      "label": "Hãng sản xuất",
+      "value": "Tân Á Đại Thành"
+    },
+    {
+      "label": "Chất liệu bình bảo ôn",
+      "value": "Inox 304 – công nghệ Nhật Bản"
+    },
+    {
+      "label": "Bảo hành",
+      "value": "5 năm"
+    }
+  ],
+  "images": [
+    {
+      "sourceUrl": "https://tana-daithanh.com/wp-content/uploads/2019/05/may-nuoc-nong-nang-luong-mat-troi-okayama-1.png",
+      "localPath": "/images/catalog/38bb13c783ecaa4a.webp",
+      "alt": "Máy nước nóng năng lượng mặt trời Okayama 300 lít"
+    }
+  ],
+  "sourceUrl": "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-okayama-300-lit/",
+  "variants": [],
+  "sourceStatus": "fetched",
+  "stockStatus": null,
+  "priceSource": "primary-product-summary",
+  "notes": []
+}

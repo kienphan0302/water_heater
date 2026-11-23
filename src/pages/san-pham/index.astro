@@ -1,0 +1,7 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageIntro from '../../components/PageIntro.astro';
+import Catalog from '../../components/Catalog.astro';
+import { site } from '../../config/site';
+---
+<BaseLayout title={`Danh mục sản phẩm | ${site.shortBrand}`}><PageIntro title="Khám phá sản phẩm." eyebrow="MÁY NƯỚC NÓNG & THIẾT BỊ GIA ĐÌNH" description="Tìm theo model, nhóm thiết bị, thương hiệu hoặc khoảng giá. Xem thông số chi tiết để chọn phương án phù hợp."/><Catalog/></BaseLayout>

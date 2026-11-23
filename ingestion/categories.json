@@ -1,0 +1,320 @@
+{
+  "source": "https://tana-daithanh.com/",
+  "capturedAt": "2026-11-23T04:02:57.413561+00:00",
+  "mainCategories": [
+    {
+      "key": "may-nuoc-nong",
+      "name": "Máy nước nóng năng lượng mặt trời",
+      "sourceSlug": "may-nuoc-nong-nang-luong-mat-troi",
+      "productCount": 26,
+      "image": {
+        "sourceUrl": "https://tana-daithanh.com/wp-content/uploads/2019/03/may-nuoc-nong-nang-luong-mat-troi-tan-a-dai-thanh.png",
+        "localPath": "/images/catalog/6cab06d8a726da61.webp",
+        "alt": "Máy nước nóng năng lượng mặt trời Đại Thành 130 lít (tặng phụ kiện)",
+        "width": 1160,
+        "height": 1160,
+        "bytes": 94650
+      }
+    },
+    {
+      "key": "bon-inox",
+      "name": "Bồn nước inox",
+      "sourceSlug": "bon-nuoc-inox",
+      "productCount": 14,
+      "image": {
+        "sourceUrl": "https://tana-daithanh.com/wp-content/uploads/2019/05/Untitled-1.png",
+        "localPath": "/images/catalog/342fc34ec82021ff.webp",
+        "alt": "Bồn nước Inox Đại Thành SUS 304 – 500lít Đứng",
+        "width": 600,
+        "height": 600,
+        "bytes": 18062
+      }
+    },
+    {
+      "key": "bon-nhua",
+      "name": "Bồn nước nhựa",
+      "sourceSlug": "bon-nuoc-nhua",
+      "productCount": 4,
+      "image": {
+        "sourceUrl": "https://tana-daithanh.com/wp-content/uploads/2019/05/bonnam.png",
+        "localPath": "/images/catalog/1146573037569998.webp",
+        "alt": "Bồn nước nhựa Đại Thành Gold 500 lít Ngang",
+        "width": 600,
+        "height": 600,
+        "bytes": 18100
+      }
+    },
+    {
+      "key": "bon-tu-hoai",
+      "name": "Bồn tự hoại",
+      "sourceSlug": "bon-tu-hoai",
+      "productCount": 4,
+      "image": {
+        "sourceUrl": "https://tana-daithanh.com/wp-content/uploads/2019/05/HO.png",
+        "localPath": "/images/catalog/7a05920489f4cfa8.webp",
+        "alt": "Bồn tự hoại Đại Thành 500lít",
+        "width": 400,
+        "height": 400,
+        "bytes": 4278
+      }
+    },
+    {
+      "key": "may-loc-nuoc",
+      "name": "Máy lọc nước RO",
+      "sourceSlug": "may-loc-nuoc",
+      "productCount": 6,
+      "image": {
+        "sourceUrl": "https://tana-daithanh.com/wp-content/uploads/2019/05/aRTE.png",
+        "localPath": "/images/catalog/121c4681539ec2cf.webp",
+        "alt": "Máy lọc nước RO Arte 8 lõi",
+        "width": 600,
+        "height": 600,
+        "bytes": 12578
+      }
+    },
+    {
+      "key": "chau-rua",
+      "name": "Chậu rửa",
+      "sourceSlug": "chau-rua",
+      "productCount": 2,
+      "image": {
+        "sourceUrl": "https://tana-daithanh.com/wp-content/uploads/2019/05/chau_1_hoc_master.jpeg",
+        "localPath": "/images/catalog/d9213b9ce6157cd3.webp",
+        "alt": "Chậu rửa Inox 304 nguyên khối Đại Thành DX41004",
+        "width": 1113,
+        "height": 935,
+        "bytes": 88534
+      }
+    },
+    {
+      "key": "sen-voi",
+      "name": "Sen vòi",
+      "sourceSlug": "sen-voi",
+      "productCount": 5,
+      "image": {
+        "sourceUrl": "https://tana-daithanh.com/wp-content/uploads/2019/05/1.jpg",
+        "localPath": "/images/catalog/29f28434fe47c0f4.webp",
+        "alt": "Vòi sen cao cấp Đại Thành ĐT709S",
+        "width": 600,
+        "height": 450,
+        "bytes": 24544
+      }
+    }
+  ],
+  "sourceCategories": [
+    {
+      "key": "bon-nuoc-inox",
+      "mainKey": "bon-inox",
+      "name": "BỒN NƯỚC INOX",
+      "sourceUrl": "https://tana-daithanh.com/danh-muc/bon-nuoc-inox/",
+      "sourceProductUrls": [
+        "https://tana-daithanh.com/san-pham/bon-nuoc-inox-dai-thanh-sus-304-2500lit-ngang/",
+        "https://tana-daithanh.com/san-pham/bon-nuoc-inox-dai-thanh-sus-304-2000lit-ngang/",
+        "https://tana-daithanh.com/san-pham/bon-nuoc-inox-dai-thanh-sus-304-1500lit-ngang/",
+        "https://tana-daithanh.com/san-pham/bon-nuoc-inox-dai-thanh-sus-304-1000lit-ngang/",
+        "https://tana-daithanh.com/san-pham/bon-nuoc-inox-dai-thanh-sus-304-700lit-ngang/",
+        "https://tana-daithanh.com/san-pham/bon-nuoc-inox-dai-thanh-sus-304-500lit-ngang/",
+        "https://tana-daithanh.com/san-pham/bon-nuoc-inox-dai-thanh-sus-304-3000lit-dung/",
+        "https://tana-daithanh.com/san-pham/bon-nuoc-inox-dai-thanh-sus-304-2500lit-dung/",
+        "https://tana-daithanh.com/san-pham/bon-nuoc-inox-dai-thanh-sus-304-2000lit-dung/",
+        "https://tana-daithanh.com/san-pham/bon-nuoc-inox-dai-thanh-sus-304-1500lit-dung/",
+        "https://tana-daithanh.com/san-pham/bon-nuoc-inox-dai-thanh-sus-304-1000lit-dung/",
+        "https://tana-daithanh.com/san-pham/bon-nuoc-inox-dai-thanh-sus-304-700lit-dung/",
+        "https://tana-daithanh.com/san-pham/bon-nuoc-inox-dai-thanh-sus-304-500lit-dung/"
+      ],
+      "pagination": [],
+      "sourceCountText": "Xem tất cả 13 kết quả Xem tất cả 13 kết quả"
+    },
+    {
+      "key": "bon-nuoc-nhua",
+      "mainKey": "bon-nhua",
+      "name": "BỒN NƯỚC NHỰA",
+      "sourceUrl": "https://tana-daithanh.com/danh-muc/bon-nuoc-nhua/",
+      "sourceProductUrls": [
+        "https://tana-daithanh.com/san-pham/bon-nuoc-nhua-the-he-moi-1500-lit-ngang/",
+        "https://tana-daithanh.com/san-pham/bon-nuoc-nhua-the-he-moi-1000-lit-ngang/",
+        "https://tana-daithanh.com/san-pham/bon-nuoc-nhua-the-he-moi-700-lit-ngang/",
+        "https://tana-daithanh.com/san-pham/bon-nuoc-nhua-the-he-moi-500-lit-ngang/"
+      ],
+      "pagination": [],
+      "sourceCountText": "Xem tất cả 4 kết quả Xem tất cả 4 kết quả"
+    },
+    {
+      "key": "bon-tu-hoai",
+      "mainKey": "bon-tu-hoai",
+      "name": "BỒN TỰ HOẠI",
+      "sourceUrl": "https://tana-daithanh.com/danh-muc/bon-tu-hoai/",
+      "sourceProductUrls": [
+        "https://tana-daithanh.com/san-pham/bon-tu-hoai-dai-thanh-2000lit/",
+        "https://tana-daithanh.com/san-pham/bon-tu-hoai-dai-thanh-1500lit/",
+        "https://tana-daithanh.com/san-pham/bon-tu-hoai-dai-thanh-1000lit/",
+        "https://tana-daithanh.com/san-pham/bon-tu-hoai-dai-thanh-500lit/"
+      ],
+      "pagination": [],
+      "sourceCountText": "Xem tất cả 4 kết quả Xem tất cả 4 kết quả"
+    },
+    {
+      "key": "chau-rua",
+      "mainKey": "chau-rua",
+      "name": "CHẬU RỬA",
+      "sourceUrl": "https://tana-daithanh.com/danh-muc/chau-rua/",
+      "sourceProductUrls": [
+        "https://tana-daithanh.com/san-pham/chau-rua-inox-304-nguyen-khoi-dai-thanh-dx41101/",
+        "https://tana-daithanh.com/san-pham/chau-rua-inox-304-nguyen-khoi-dai-thanh-dx41004/"
+      ],
+      "pagination": [],
+      "sourceCountText": "Xem tất cả 2 kết quả Xem tất cả 2 kết quả"
+    },
+    {
+      "key": "may-loc-nuoc",
+      "mainKey": "may-loc-nuoc",
+      "name": "MÁY LỌC NƯỚC",
+      "sourceUrl": "https://tana-daithanh.com/danh-muc/may-loc-nuoc/",
+      "sourceProductUrls": [
+        "https://tana-daithanh.com/san-pham/may-loc-nuoc-ro-aqualast-10-loi/",
+        "https://tana-daithanh.com/san-pham/may-loc-nuoc-ro-aqualast-9-loi/",
+        "https://tana-daithanh.com/san-pham/may-loc-nuoc-ro-aqualast-8-loi/",
+        "https://tana-daithanh.com/san-pham/may-loc-nuoc-ro-arte-10-loi/",
+        "https://tana-daithanh.com/san-pham/may-loc-nuoc-ro-arte-9-loi-2/",
+        "https://tana-daithanh.com/san-pham/may-loc-nuoc-ro-arte-8-loi-2/"
+      ],
+      "pagination": [],
+      "sourceCountText": "Xem tất cả 6 kết quả Xem tất cả 6 kết quả"
+    },
+    {
+      "key": "may-nuoc-nong-nang-luong-mat-troi-okayama",
+      "mainKey": "may-nuoc-nong",
+      "name": "MÁY NƯỚC NÓNG NĂNG LƯỢNG MẶT TRỜI OKAYAMA",
+      "sourceUrl": "https://tana-daithanh.com/danh-muc/may-nuoc-nong-nang-luong-mat-troi-okayama/",
+      "sourceProductUrls": [
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-okayama-130-lit/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-okayama-160-lit/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-okayama-180-lit/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-okayama-215-lit/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-okayama-250-lit/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-okayama-300-lit/"
+      ],
+      "pagination": [],
+      "sourceCountText": "Xem tất cả 6 kết quả Xem tất cả 6 kết quả"
+    },
+    {
+      "key": "may-nuoc-nong-nang-luong-mat-troi",
+      "mainKey": "may-nuoc-nong",
+      "name": "MÁY NƯỚC NÓNG NĂNG LƯỢNG MẶT TRỜI",
+      "sourceUrl": "https://tana-daithanh.com/danh-muc/may-nuoc-nong-nang-luong-mat-troi/",
+      "sourceProductUrls": [
+        "https://tana-daithanh.com/san-pham/may-nlmt-tan-a-dai-thanh-ruot-ppr-chong-phen-man-150l/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-aroni-130l/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-aroni-160l/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-aroni-180l/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-aroni-215l/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-aroni-250l/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-aroni-300l/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-tan-a-gold-150l/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-tan-a-gold-160-lit/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-tan-a-gold-180-lit/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-tan-a-gold-215-lit/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-tan-a-gold-250-lit/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-tan-a-gold-300-lit/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-dai-thanh-130l/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-dai-thanh-160-lit/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-dai-thanh-180-lit-58-18/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-dai-thanh-215-lit-58-21/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-dai-thanh-250-lit/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-dai-thanh-300-lit/"
+      ],
+      "pagination": [],
+      "sourceCountText": "Xem tất cả 19 kết quả Xem tất cả 19 kết quả"
+    },
+    {
+      "key": "may-nuoc-nong-nang-luong-mat-troi-aroni",
+      "mainKey": "may-nuoc-nong",
+      "name": "MÁY NƯỚC NÓNG NĂNG LƯỢNG MẶT TRỜI KRONI",
+      "sourceUrl": "https://tana-daithanh.com/danh-muc/may-nuoc-nong-nang-luong-mat-troi/may-nuoc-nong-nang-luong-mat-troi-aroni/",
+      "sourceProductUrls": [
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-aroni-130l/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-aroni-160l/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-aroni-180l/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-aroni-215l/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-aroni-250l/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-aroni-300l/"
+      ],
+      "pagination": [],
+      "sourceCountText": "Xem tất cả 6 kết quả Xem tất cả 6 kết quả"
+    },
+    {
+      "key": "may-nuoc-nong-nang-luong-mat-troi-dai-thanh",
+      "mainKey": "may-nuoc-nong",
+      "name": "MÁY NƯỚC NÓNG NĂNG LƯỢNG MẶT TRỜI ĐẠI THÀNH",
+      "sourceUrl": "https://tana-daithanh.com/danh-muc/may-nuoc-nong-nang-luong-mat-troi/may-nuoc-nong-nang-luong-mat-troi-dai-thanh/",
+      "sourceProductUrls": [
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-dai-thanh-130l/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-dai-thanh-160-lit/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-dai-thanh-180-lit-58-18/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-dai-thanh-215-lit-58-21/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-dai-thanh-250-lit/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-dai-thanh-300-lit/"
+      ],
+      "pagination": [],
+      "sourceCountText": "Xem tất cả 6 kết quả Xem tất cả 6 kết quả"
+    },
+    {
+      "key": "may-nuoc-nong-nang-luong-mat-troi-tan-a-gold",
+      "mainKey": "may-nuoc-nong",
+      "name": "MÁY NƯỚC NÓNG NĂNG LƯỢNG MẶT TRỜI TÂN Á GOLD",
+      "sourceUrl": "https://tana-daithanh.com/danh-muc/may-nuoc-nong-nang-luong-mat-troi/may-nuoc-nong-nang-luong-mat-troi-tan-a-gold/",
+      "sourceProductUrls": [
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-tan-a-gold-150l/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-tan-a-gold-160-lit/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-tan-a-gold-180-lit/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-tan-a-gold-215-lit/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-tan-a-gold-250-lit/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-tan-a-gold-300-lit/"
+      ],
+      "pagination": [],
+      "sourceCountText": "Xem tất cả 6 kết quả Xem tất cả 6 kết quả"
+    },
+    {
+      "key": "may-nuoc-nong-nlmt-tan-a-dai-thanh-inox-cao-cap-316-ruot-ppr-chong-phen-man",
+      "mainKey": "may-nuoc-nong",
+      "name": "Máy NLMT Tân Á Đại Thành dòng cao cấp",
+      "sourceUrl": "https://tana-daithanh.com/danh-muc/may-nuoc-nong-nang-luong-mat-troi/may-nuoc-nong-nlmt-tan-a-dai-thanh-inox-cao-cap-316-ruot-ppr-chong-phen-man/",
+      "sourceProductUrls": [
+        "https://tana-daithanh.com/san-pham/may-nlmt-tan-a-dai-thanh-ruot-ppr-chong-phen-man-150l/"
+      ],
+      "pagination": [],
+      "sourceCountText": "Xem tất cả 1 kết quả Xem tất cả 1 kết quả"
+    },
+    {
+      "key": "sen-voi",
+      "mainKey": "sen-voi",
+      "name": "SEN VÒI",
+      "sourceUrl": "https://tana-daithanh.com/danh-muc/sen-voi/",
+      "sourceProductUrls": [
+        "https://tana-daithanh.com/san-pham/sen-cay-tam-nong-lanh-dung-vuong-inox-304-ds04/",
+        "https://tana-daithanh.com/san-pham/sen-cay-tam-nong-lanh-dung-tron-inox-sus-304-ds03/",
+        "https://tana-daithanh.com/san-pham/sen-voi-tam-nong-lanh-inox-sus-304-tana-801s/",
+        "https://tana-daithanh.com/san-pham/voi-sen-cao-cap-dai-thanh-dt801s/",
+        "https://tana-daithanh.com/san-pham/voi-sen-cao-cap-dai-thanh-dt709s/"
+      ],
+      "pagination": [],
+      "sourceCountText": "Xem tất cả 5 kết quả Xem tất cả 5 kết quả"
+    },
+    {
+      "key": "uncategorized",
+      "mainKey": "khac",
+      "name": "Uncategorized",
+      "sourceUrl": "https://tana-daithanh.com/danh-muc/uncategorized/",
+      "sourceProductUrls": [
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-okayama-130-lit/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-okayama-180-lit/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-okayama-215-lit/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-okayama-250-lit/",
+        "https://tana-daithanh.com/san-pham/bon-nuoc-inox-dai-thanh-sus-304-3000lit-ngang/",
+        "https://tana-daithanh.com/san-pham/may-nuoc-nong-nang-luong-mat-troi-tan-a-gold-130-lit/"
+      ],
+      "pagination": [],
+      "sourceCountText": "Xem tất cả 6 kết quả Xem tất cả 6 kết quả"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageIntro from '../../components/PageIntro.astro';
+import Catalog from '../../components/Catalog.astro';
+import { allCategories, sourceCategories, categoryHref, type Category } from '../../data/catalog';
+import { site } from '../../config/site';
+export function getStaticPaths(){return allCategories.map(category=>({params:{slug:category.key},props:{category}}));}
+const { category }=Astro.props as {category:Category};
+const children=sourceCategories.filter(item=>item.mainKey===category.key&&item.key!==category.key);
+---
+<BaseLayout title={`${category.name} | ${site.shortBrand}`}><PageIntro title={category.name} eyebrow="DANH MỤC SẢN PHẨM" description={category.description||`Khám phá các model ${category.name.toLocaleLowerCase('vi')}, đối chiếu thông số và gửi yêu cầu tư vấn theo nhu cầu của bạn.`}/>{children.length>0&&<nav class="container subcategory-tabs" aria-label="Dòng sản phẩm">{children.map(item=><a href={categoryHref(item)}>{item.name}</a>)}</nav>}<Catalog initialCategory={category.key}/></BaseLayout>

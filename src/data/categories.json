@@ -1,0 +1,100 @@
+[
+  {
+    "key": "may-nuoc-nong",
+    "name": "Máy nước nóng năng lượng mặt trời",
+    "sourceSlug": "may-nuoc-nong-nang-luong-mat-troi",
+    "productCount": 26,
+    "image": {
+      "sourceUrl": "https://tana-daithanh.com/wp-content/uploads/2019/03/may-nuoc-nong-nang-luong-mat-troi-tan-a-dai-thanh.png",
+      "localPath": "/images/catalog/6cab06d8a726da61.webp",
+      "alt": "Máy nước nóng năng lượng mặt trời Đại Thành 130 lít (tặng phụ kiện)",
+      "width": 1160,
+      "height": 1160,
+      "bytes": 94650
+    }
+  },
+  {
+    "key": "bon-inox",
+    "name": "Bồn nước inox",
+    "sourceSlug": "bon-nuoc-inox",
+    "productCount": 14,
+    "image": {
+      "sourceUrl": "https://tana-daithanh.com/wp-content/uploads/2019/05/Untitled-1.png",
+      "localPath": "/images/catalog/342fc34ec82021ff.webp",
+      "alt": "Bồn nước Inox Đại Thành SUS 304 – 500lít Đứng",
+      "width": 600,
+      "height": 600,
+      "bytes": 18062
+    }
+  },
+  {
+    "key": "bon-nhua",
+    "name": "Bồn nước nhựa",
+    "sourceSlug": "bon-nuoc-nhua",
+    "productCount": 4,
+    "image": {
+      "sourceUrl": "https://tana-daithanh.com/wp-content/uploads/2019/05/bonnam.png",
+      "localPath": "/images/catalog/1146573037569998.webp",
+      "alt": "Bồn nước nhựa Đại Thành Gold 500 lít Ngang",
+      "width": 600,
+      "height": 600,
+      "bytes": 18100
+    }
+  },
+  {
+    "key": "bon-tu-hoai",
+    "name": "Bồn tự hoại",
+    "sourceSlug": "bon-tu-hoai",
+    "productCount": 4,
+    "image": {
+      "sourceUrl": "https://tana-daithanh.com/wp-content/uploads/2019/05/HO.png",
+      "localPath": "/images/catalog/7a05920489f4cfa8.webp",
+      "alt": "Bồn tự hoại Đại Thành 500lít",
+      "width": 400,
+      "height": 400,
+      "bytes": 4278
+    }
+  },
+  {
+    "key": "may-loc-nuoc",
+    "name": "Máy lọc nước RO",
+    "sourceSlug": "may-loc-nuoc",
+    "productCount": 6,
+    "image": {
+      "sourceUrl": "https://tana-daithanh.com/wp-content/uploads/2019/05/aRTE.png",
+      "localPath": "/images/catalog/121c4681539ec2cf.webp",
+      "alt": "Máy lọc nước RO Arte 8 lõi",
+      "width": 600,
+      "height": 600,
+      "bytes": 12578
+    }
+  },
+  {
+    "key": "chau-rua",
+    "name": "Chậu rửa",
+    "sourceSlug": "chau-rua",
+    "productCount": 2,
+    "image": {
+      "sourceUrl": "https://tana-daithanh.com/wp-content/uploads/2019/05/chau_1_hoc_master.jpeg",
+      "localPath": "/images/catalog/d9213b9ce6157cd3.webp",
+      "alt": "Chậu rửa Inox 304 nguyên khối Đại Thành DX41004",
+      "width": 1113,
+      "height": 935,
+      "bytes": 88534
+    }
+  },
+  {
+    "key": "sen-voi",
+    "name": "Sen vòi",
+    "sourceSlug": "sen-voi",
+    "productCount": 5,
+    "image": {
+      "sourceUrl": "https://tana-daithanh.com/wp-content/uploads/2019/05/1.jpg",
+      "localPath": "/images/catalog/29f28434fe47c0f4.webp",
+      "alt": "Vòi sen cao cấp Đại Thành ĐT709S",
+      "width": 600,
+      "height": 450,
+      "bytes": 24544
+    }
+  }
+]

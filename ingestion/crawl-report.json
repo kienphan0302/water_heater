@@ -1,0 +1,51 @@
+{
+  "source": "https://tana-daithanh.com/",
+  "capturedAt": "2026-11-23T04:02:57.413561+00:00",
+  "productSitemapCount": 61,
+  "categorySitemapCount": 13,
+  "discoveredProductCount": 61,
+  "fetchedProductCount": 61,
+  "fetchedCategoryPages": 13,
+  "mainCategoryCounts": {
+    "may-nuoc-nong": 26,
+    "bon-inox": 14,
+    "bon-nhua": 4,
+    "may-loc-nuoc": 6,
+    "chau-rua": 2,
+    "sen-voi": 5,
+    "bon-tu-hoai": 4
+  },
+  "categoryMapping": {
+    "bon-nuoc-inox": "bon-inox",
+    "bon-nuoc-nhua": "bon-nhua",
+    "bon-tu-hoai": "bon-tu-hoai",
+    "chau-rua": "chau-rua",
+    "may-loc-nuoc": "may-loc-nuoc",
+    "may-nuoc-nong-nang-luong-mat-troi-okayama": "may-nuoc-nong",
+    "may-nuoc-nong-nang-luong-mat-troi": "may-nuoc-nong",
+    "may-nuoc-nong-nang-luong-mat-troi-aroni": "may-nuoc-nong",
+    "may-nuoc-nong-nang-luong-mat-troi-dai-thanh": "may-nuoc-nong",
+    "may-nuoc-nong-nang-luong-mat-troi-tan-a-gold": "may-nuoc-nong",
+    "may-nuoc-nong-nlmt-tan-a-dai-thanh-inox-cao-cap-316-ruot-ppr-chong-phen-man": "may-nuoc-nong",
+    "sen-voi": "sen-voi",
+    "uncategorized": "khac"
+  },
+  "uniqueSourceImageCount": 32,
+  "downloadedImageCount": 32,
+  "imageBytes": 1759380,
+  "priceOnRequestCount": 5,
+  "specificationCount": 61,
+  "failures": [],
+  "requests": [],
+  "coverageComplete": true,
+  "notes": [
+    "Discovery combines all product sitemap URLs and product links from category pages/pagination.",
+    "WooCommerce Store API endpoint returned 404 during discovery; HTML and Yoast sitemaps were used.",
+    "Product prices come only from the main product-summary price element, never sidebar/related cards.",
+    "Generic model-family tables and old promotional price lists in long descriptions are not treated as current SKU prices/specifications.",
+    "The source Aroni category has a KRONI title; source category labels are preserved while product brand follows each SKU title.",
+    "Some products are absent from normal category lists but present in the product sitemap; all discovered SKUs are retained and assigned to a principal group from their SKU/category facts.",
+    "Manufacturer/source warranty information requires confirmation when the new store quotes a final order.",
+    "No supplier contact details, source tracking code, customer reviews or long marketing descriptions were imported."
+  ]
+}

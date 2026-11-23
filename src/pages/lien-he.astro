@@ -1,0 +1,8 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageIntro from '../components/PageIntro.astro';
+import Consultation from '../components/Consultation.astro';
+import Icon from '../components/Icon.astro';
+import { site } from '../config/site';
+---
+<BaseLayout title={`Liên hệ tư vấn | ${site.shortBrand}`}><PageIntro title="Trao đổi về lựa chọn của bạn." eyebrow="LIÊN HỆ TƯ VẤN" description="Gửi model sản phẩm, khu vực lắp đặt và nhu cầu sử dụng để trao đổi thêm trước khi lựa chọn."/><section class="section container"><div class="contact-grid">{site.phone&&<a class="contact-card" href={`tel:${site.phone}`} data-track="click_phone"><Icon name="phone" size={28}/><h2>Gọi tư vấn</h2><strong>{site.phoneDisplay}</strong><p>Trao đổi về sản phẩm và phương án lắp đặt.</p></a>}{site.zalo&&<a class="contact-card" href={site.zalo} target="_blank" rel="noopener" data-track="click_zalo"><Icon name="chat" size={28}/><h2>Nhắn Zalo</h2><strong>Gửi ảnh và thông tin công trình</strong><p>Chuẩn bị ảnh vị trí lắp và model bạn quan tâm.</p></a>}{site.email&&<a class="contact-card" href={`mailto:${site.email}`}><Icon name="mail" size={28}/><h2>Gửi email</h2><strong>{site.email}</strong><p>Gửi câu hỏi và những nội dung cần làm rõ.</p></a>}{!site.phone&&!site.zalo&&!site.email&&<a class="contact-card" href="#tu-van"><Icon name="chat" size={28}/><h2>Để lại yêu cầu tư vấn</h2><p>Điền số điện thoại, khu vực lắp đặt và model đang cân nhắc trong biểu mẫu bên dưới.</p></a>}</div>{site.address&&<div class="address-block"><h2>Thông tin liên hệ</h2><p>{site.company}</p><p>{site.address}</p><p>Vui lòng liên hệ trước để thống nhất lịch trao đổi.</p></div>}</section><Consultation/></BaseLayout>

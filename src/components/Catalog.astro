@@ -1,0 +1,24 @@
+---
+import { products, categories, categoryName, productsInCategory } from '../data/catalog';
+import ProductCard from './ProductCard.astro';
+import Icon from './Icon.astro';
+interface Props { initialCategory?: string; }
+const { initialCategory = '' } = Astro.props;
+const visibleProducts = initialCategory ? productsInCategory(initialCategory) : products;
+const brands = [...new Set(visibleProducts.map(product => product.brand).filter((brand): brand is string => !!brand))].sort((a,b)=>a.localeCompare(b,'vi'));
+---
+<section class="section container catalog" id="catalog" data-initial-category={initialCategory}>
+  <form id="catalog-filters" class="catalog-filters" role="search">
+    <label class="catalog-search"><span>Tìm sản phẩm</span><span class="search-input"><Icon name="search" size={19}/><input name="q" type="search" placeholder="Tên, model hoặc dung tích…" aria-label="Tìm theo tên, model hoặc dung tích"/></span></label>
+    {initialCategory ? <input name="category" type="hidden" value={initialCategory}/> : <label>Danh mục<select name="category"><option value="">Tất cả danh mục</option>{categories.map(category=><option value={category.key}>{category.name}</option>)}</select></label>}
+    <label>Thương hiệu<select name="brand"><option value="">Tất cả thương hiệu</option>{brands.map(brand=><option value={brand}>{brand}</option>)}</select></label>
+    <label>Khoảng giá<select name="price"><option value="">Tất cả khoảng giá</option><option value="under-3">Dưới 3 triệu đồng</option><option value="3-7">3–7 triệu đồng</option><option value="7-15">7–15 triệu đồng</option><option value="over-15">Trên 15 triệu đồng</option><option value="contact">Liên hệ báo giá</option></select></label>
+    <button class="button button-soft filter-reset" type="reset">Đặt lại</button>
+  </form>
+  <div class="catalog-topline"><p id="catalog-count" aria-live="polite">{visibleProducts.length} sản phẩm{initialCategory ? ` · ${categoryName(initialCategory)}` : ''}</p><label class="sort-label">Sắp xếp<select name="sort" id="catalog-sort"><option value="default">Mặc định</option><option value="price-asc">Giá tăng dần</option><option value="price-desc">Giá giảm dần</option><option value="name">Tên A–Z</option></select></label></div>
+  <div class="product-grid" id="catalog-grid">{visibleProducts.map(product=><ProductCard product={product}/>)}</div>
+  <div id="catalog-empty" class="empty-state" hidden><Icon name="search" size={38}/><h2>Chưa tìm thấy sản phẩm phù hợp.</h2><p>Thử thay đổi từ khóa hoặc bỏ bớt bộ lọc. Bạn cũng có thể gửi model cần tìm để được tư vấn.</p><a class="button" href="/lien-he/#tu-van">Gửi yêu cầu tư vấn</a></div>
+  <nav class="pagination" id="catalog-pagination" aria-label="Phân trang sản phẩm"></nav>
+  <noscript><p class="catalog-note">Danh mục bên dưới hiển thị toàn bộ sản phẩm. Bật JavaScript để sử dụng bộ lọc và phân trang.</p></noscript>
+</section>
+<script src="../scripts/catalog.ts"></script>

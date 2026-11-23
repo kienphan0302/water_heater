@@ -1,0 +1,8 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageIntro from '../../components/PageIntro.astro';
+import Icon from '../../components/Icon.astro';
+import { articles } from '../../data/articles';
+import { site } from '../../config/site';
+---
+<BaseLayout title={`Cẩm nang lựa chọn | ${site.shortBrand}`}><PageIntro title="Thêm thông tin cho lựa chọn của bạn." eyebrow="CẨM NANG" description="Những điều nên chuẩn bị và đối chiếu khi tìm hiểu sản phẩm, trao đổi báo giá và lưu thông tin bảo hành."/><section class="section container"><div class="guide-grid">{articles.map(article=><a class="guide-card" href={`/kien-thuc/${article.slug}/`}><span class="guide-icon"><Icon name={article.icon} size={29}/></span><p class="eyebrow">{article.eyebrow}</p><h3>{article.title}</h3><p>{article.excerpt}</p><span class="text-link">Đọc bài viết</span></a>)}</div></section></BaseLayout>

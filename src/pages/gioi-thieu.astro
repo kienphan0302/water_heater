@@ -1,0 +1,8 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageIntro from '../components/PageIntro.astro';
+import Consultation from '../components/Consultation.astro';
+import { site } from '../config/site';
+import { products, categories } from '../data/catalog';
+---
+<BaseLayout title={`Giới thiệu | ${site.shortBrand}`}><PageIntro title="Tiện nghi bắt đầu từ lựa chọn phù hợp." eyebrow="VỀ WEBSITE" description="Một nơi để khám phá thông tin máy nước nóng và thiết bị gia đình, rồi trao đổi phương án theo nhu cầu sử dụng thực tế."/><section class="section container"><div class="about-intro"><p class="eyebrow">TỪ THÔNG TIN ĐẾN LỰA CHỌN</p><h2>Hiểu rõ thiết bị.<br/>Hiểu rõ nhu cầu của bạn.</h2><p>{site.company?`${site.company} giới thiệu`:'Website giới thiệu'} danh mục {products.length} sản phẩm thuộc {categories.length} nhóm thiết bị, từ máy nước nóng năng lượng mặt trời đến bồn nước, thiết bị lọc nước và sen vòi, chậu rửa.</p><p>Bạn có thể tìm theo model, xem ảnh, đối chiếu các thông số được công bố và gửi yêu cầu tư vấn cho từng sản phẩm. Các nội dung về giá, phạm vi cung cấp và lắp đặt được trao đổi theo từng yêu cầu cụ thể.</p></div><div class="info-grid"><article class="info-card"><h2>Khám phá thiết bị</h2><p>Duyệt danh mục theo nhóm sản phẩm, thương hiệu hoặc khoảng giá để thu hẹp những model bạn muốn tìm hiểu.</p></article><article class="info-card"><h2>Trao đổi nhu cầu</h2><p>Chia sẻ khu vực lắp đặt, cách sử dụng và sản phẩm đang cân nhắc để buổi tư vấn tập trung vào những thông tin cần thiết.</p></article><article class="info-card"><h2>Xác nhận phương án</h2><p>Đối chiếu model, thông số, hạng mục đi kèm và điều kiện bảo hành trong báo giá trước khi quyết định.</p></article></div></section><Consultation/></BaseLayout>

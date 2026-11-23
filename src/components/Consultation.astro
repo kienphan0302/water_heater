@@ -1,0 +1,9 @@
+---
+import { site } from '../config/site';
+import type { Product } from '../data/catalog';
+import LeadForm from './LeadForm.astro';
+import Icon from './Icon.astro';
+interface Props { product?: Product; }
+const { product } = Astro.props;
+---
+<section class="consult-section section" id="tu-van"><div class="container consult-grid"><div class="consult-copy"><p class="eyebrow light">CHỌN ĐÚNG TỪ NHU CẦU THỰC TẾ</p><h2>Một lựa chọn phù hợp.<br/>Thêm tiện nghi mỗi ngày.</h2><p>Chia sẻ sản phẩm bạn quan tâm, không gian lắp đặt và nhu cầu sử dụng. Chúng tôi sẽ trao đổi để bạn có thêm thông tin trước khi lựa chọn.</p><ul class="consult-list"><li><Icon name="check" size={19}/>Đối chiếu model và thông số sản phẩm</li><li><Icon name="check" size={19}/>Trao đổi vị trí, điều kiện lắp đặt</li><li><Icon name="check" size={19}/>Xác nhận giá và phạm vi cung cấp</li></ul>{site.phone && <a class="consult-phone" href={`tel:${site.phone}`} data-track="click_phone"><Icon name="phone" size={29}/><span><small>LIÊN HỆ TƯ VẤN</small>{site.phoneDisplay}</span></a>}</div><LeadForm product={product}/></div></section>
