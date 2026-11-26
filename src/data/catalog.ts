@@ -11,6 +11,7 @@ export interface Product {
   categories: Category[]; brand?: string; price: number | null; regularPrice?: number | null;
   summary: string; specs: ProductSpec[]; images: ProductImage[]; sourceUrl: string;
   variants?: ProductVariant[]; sourceStatus?: string; priceMax?: number | null;
+  cmsImage?: string | null; cmsImageAlt?: string | null;
 }
 
 export const products = rawProducts as unknown as Product[];
@@ -22,7 +23,8 @@ export const productPrice = (product: Product) => product.price && product.price
 export const productHref = (product: Product) => `/san-pham/${product.slug}/`;
 export const categoryHref = (category: Category | string) => `/danh-muc/${typeof category === 'string' ? category : category.key}/`;
 export const categoryName = (key: string) => allCategories.find(category => category.key === key)?.name || 'Thiết bị gia đình';
-export const productImage = (product: Product) => product.images[0]?.localPath || '/images/product-placeholder.svg';
+export const productImages = (product: Product): ProductImage[] => product.cmsImage ? [{ localPath: product.cmsImage, alt: product.cmsImageAlt || product.name, sourceUrl: '' }, ...product.images.filter(image => image.localPath !== product.cmsImage)] : product.images;
+export const productImage = (product: Product) => productImages(product)[0]?.localPath || '/images/product-placeholder.svg';
 export const productsInCategory = (key: string) => products.filter(product => product.categoryKey === key || product.categories.some(category => category.key === key));
 export const normalizeSearch = (value: string) => value.toLocaleLowerCase('vi').normalize('NFD').replace(/\p{Diacritic}/gu, '').replace(/đ/g, 'd').trim();
 export const categoryIcon = (category: Category) => {

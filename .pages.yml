@@ -1,8 +1,7 @@
-
 media:
-  input: public/images/catalog
-  output: /images/catalog
-  rename: safe
+  input: public/images/cms
+  output: /images/cms
+  rename: random
   extensions: [jpg, jpeg, png, webp]
 
 settings:
@@ -16,8 +15,11 @@ content:
     path: src/data/products.json
     format: json
     list: true
+    operations: { create: false, delete: false, rename: false }
 
     fields:
+      - { name: cmsImage, label: Ảnh thay thế (trống dùng ảnh cũ), type: image }
+      - { name: cmsImageAlt, label: Mô tả ảnh thay thế, type: string }
       - { name: id, label: Mã sản phẩm, type: number, readonly: true }
       - { name: slug, label: Đường dẫn SEO, type: string, readonly: true }
       - { name: name, label: Tên sản phẩm, type: string, required: true }
@@ -60,7 +62,7 @@ content:
         list: true
         readonly: true
         fields:
-          - { name: localPath, label: Hình ảnh, type: image }
+          - { name: localPath, label: Đường dẫn ảnh nguồn, type: string }
           - { name: alt, label: Mô tả ảnh, type: string }
           - { name: sourceUrl, type: string }
           - { name: width, type: number }
@@ -82,3 +84,84 @@ content:
           - { name: id, type: string }
           - { name: name, type: string }
           - { name: price, type: number }
+
+  - name: articles
+    label: Bài viết SEO
+    type: collection
+    path: src/data/articles
+    format: json
+    subfolders: false
+    filename:
+      template: "{primary}.json"
+      field: create
+    view:
+      primary: title
+      fields: [title, order]
+    operations: { rename: false, delete: false }
+    fields:
+      - { name: title, label: Tiêu đề bài viết, type: string, required: true }
+      - { name: eyebrow, label: Chủ đề, type: string, required: true }
+      - { name: excerpt, label: Tóm tắt, type: text, required: true }
+      - name: icon
+        label: Biểu tượng
+        type: select
+        options:
+          values: [sun, book, shield, water, tank, filter, chat]
+      - { name: order, label: Thứ tự hiển thị, type: number }
+      - { name: seoTitle, label: Tiêu đề SEO, type: string }
+      - { name: seoDescription, label: Mô tả SEO, type: text }
+      - { name: cover, label: Ảnh bài viết, type: image }
+      - { name: coverAlt, label: Mô tả ảnh, type: string }
+      - name: sections
+        label: Nội dung bài viết
+        type: object
+        required: true
+        list:
+          min: 1
+          collapsible:
+            collapsed: false
+            summary: "{title}"
+        fields:
+          - { name: title, label: Tiêu đề mục, type: string, required: true }
+          - { name: text, label: Nội dung, type: text, required: true }
+
+  - name: banner
+    label: Banner trang chủ
+    type: file
+    path: src/config/banner.json
+    format: json
+    operations: { create: false, rename: false, delete: false }
+    fields:
+      - { name: eyebrow, label: Dòng chữ nhỏ, type: string, required: true }
+      - { name: heading, label: Tiêu đề chính, type: string, required: true }
+      - { name: accent, label: Tiêu đề nhấn mạnh, type: string, required: true }
+      - { name: description, label: Mô tả banner, type: text, required: true }
+      - { name: primaryLabel, label: Nút chính, type: string, required: true }
+      - { name: secondaryLabel, label: Nút phụ, type: string, required: true }
+      - { name: seoTitle, label: Tiêu đề SEO trang chủ, type: string, required: true }
+      - { name: image, label: Ảnh banner (trống dùng ảnh cũ), type: image }
+      - { name: imageAlt, label: Mô tả ảnh, type: string }
+      - { name: seoDescription, label: Mô tả SEO trang chủ, type: text }
+
+  - name: contact
+    label: Thông tin liên hệ
+    type: file
+    path: src/config/contact.json
+    format: json
+    operations: { create: false, rename: false, delete: false }
+    fields:
+      - { name: company, label: Tên doanh nghiệp, type: string, required: true }
+      - { name: description, label: Mô tả mặc định website, type: text, required: true }
+      - name: phone
+        label: Hotline (không dấu cách)
+        type: string
+        required: true
+        pattern: '^(0|\+84)[0-9]{9,10}$'
+      - name: zalo
+        label: Liên kết Zalo
+        type: string
+        required: true
+        pattern: '^https://zalo\.me/[a-zA-Z0-9._-]+/?$'
+      - { name: email, label: Email công khai, type: string, required: true }
+      - { name: address, label: Địa chỉ Hà Nội, type: string, required: true }
+      - { name: hcmAddress, label: Địa chỉ TP. Hồ Chí Minh, type: string, required: true }

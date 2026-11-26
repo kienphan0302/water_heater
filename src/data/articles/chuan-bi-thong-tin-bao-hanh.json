@@ -1,0 +1,25 @@
+{
+  "title": "Lưu thông tin để thuận tiện khi bảo hành",
+  "eyebrow": "SỬ DỤNG & BẢO HÀNH",
+  "excerpt": "Model, số sê-ri, chứng từ và hình ảnh lắp đặt giúp quá trình hỗ trợ rõ ràng hơn.",
+  "icon": "shield",
+  "sections": [
+    {
+      "title": "Giữ lại thông tin nhận diện sản phẩm",
+      "text": "Lưu tên model, số sê-ri nếu có, hóa đơn hoặc chứng từ mua hàng và phiếu bảo hành. Có thể chụp lại tem sản phẩm khi nhận hàng để dễ đối chiếu sau này."
+    },
+    {
+      "title": "Xác nhận chính sách cho từng sản phẩm",
+      "text": "Thời hạn, bộ phận được bảo hành và điều kiện áp dụng phụ thuộc từng model, hãng và chứng từ cung cấp. Hãy xác nhận các nội dung này trong báo giá hoặc tài liệu bàn giao, thay vì suy ra từ một sản phẩm khác cùng nhóm."
+    },
+    {
+      "title": "Mô tả rõ khi cần hỗ trợ",
+      "text": "Khi liên hệ hỗ trợ, chuẩn bị thông tin sản phẩm, thời điểm lắp đặt và mô tả hiện tượng quan sát được. Với các vấn đề liên quan đến điện hoặc an toàn thiết bị, cần liên hệ người có chuyên môn thay vì tự tháo sửa."
+    }
+  ],
+  "order": 3,
+  "seoTitle": "",
+  "seoDescription": "",
+  "cover": "",
+  "coverAlt": ""
+}

@@ -10,14 +10,15 @@
     "setup": "node scripts/setup-local.mjs",
     "dev": "astro dev --ignore-lock",
     "check": "astro check",
-    "build": "astro build",
-    "build:cloudflare": "node scripts/check-isolation.mjs --require-provisioned && astro build",
+    "build": "npm run check:cms && astro build",
+    "build:cloudflare": "npm run check:cms && node scripts/check-isolation.mjs --require-provisioned && astro build",
     "check:isolation": "node scripts/check-isolation.mjs",
     "cloudflare:configure": "node scripts/configure-cloudflare.mjs",
     "preview": "wrangler pages dev dist --ip 127.0.0.1",
     "test": "node --import tsx --test tests/*.test.ts",
     "db:local": "wrangler d1 execute water-heater-leads --local --file=schema.sql",
-    "catalog:refresh": "node scripts/refresh-catalog.mjs"
+    "catalog:refresh": "node scripts/refresh-catalog.mjs",
+    "check:cms": "node scripts/check-cms.mjs"
   },
   "dependencies": {
     "astro": "7.4.13",

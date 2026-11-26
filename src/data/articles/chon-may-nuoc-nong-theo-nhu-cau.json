@@ -1,0 +1,25 @@
+{
+  "title": "Chọn máy nước nóng từ nhu cầu thực tế",
+  "eyebrow": "LỰA CHỌN SẢN PHẨM",
+  "excerpt": "Chuẩn bị thông tin về thói quen sử dụng, vị trí lắp đặt và model đang cân nhắc.",
+  "icon": "sun",
+  "sections": [
+    {
+      "title": "Bắt đầu từ cách gia đình sử dụng nước nóng",
+      "text": "Ghi lại các khu vực cần dùng nước nóng, thời điểm sử dụng và số người trong gia đình. Những thông tin này giúp buổi tư vấn tập trung vào nhu cầu cụ thể. Dung tích được chọn cần đối chiếu với hướng dẫn của từng model và điều kiện thực tế."
+    },
+    {
+      "title": "Xem kỹ không gian và điều kiện lắp đặt",
+      "text": "Chuẩn bị ảnh khu vực dự kiến lắp, vị trí cấp nước và đường dẫn đến nơi sử dụng. Với máy nước nóng năng lượng mặt trời, cần trao đổi thêm về vị trí đặt máy và tình trạng che bóng. Phương án kỹ thuật cần được người có chuyên môn kiểm tra trước khi thi công."
+    },
+    {
+      "title": "Đối chiếu thông số theo đúng model",
+      "text": "Tên dòng máy, dung tích, kích thước và thông tin vật liệu có thể khác nhau giữa các phiên bản. Hãy dùng mã model đầy đủ khi yêu cầu báo giá và xác nhận lại thông số trên tài liệu sản phẩm trước khi mua."
+    }
+  ],
+  "order": 1,
+  "seoTitle": "",
+  "seoDescription": "",
+  "cover": "",
+  "coverAlt": ""
+}
