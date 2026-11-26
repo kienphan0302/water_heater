@@ -1,0 +1,84 @@
+
+media:
+  input: public/images/catalog
+  output: /images/catalog
+  rename: safe
+  extensions: [jpg, jpeg, png, webp]
+
+settings:
+  content:
+    merge: true
+
+content:
+  - name: products
+    label: Quản lý sản phẩm
+    type: file
+    path: src/data/products.json
+    format: json
+    list: true
+
+    fields:
+      - { name: id, label: Mã sản phẩm, type: number, readonly: true }
+      - { name: slug, label: Đường dẫn SEO, type: string, readonly: true }
+      - { name: name, label: Tên sản phẩm, type: string, required: true }
+      - { name: brand, label: Thương hiệu, type: string }
+      - { name: categoryKey, label: Mã danh mục, type: string, readonly: true }
+
+      - name: price
+        label: Giá bán VNĐ
+        type: number
+        options:
+          min: 0
+
+      - { name: regularPrice, label: Giá gốc VNĐ, type: number }
+      - { name: priceMax, label: Giá tối đa VNĐ, type: number }
+      - { name: currency, label: Tiền tệ, type: string, readonly: true }
+      - { name: summary, label: Mô tả sản phẩm, type: text }
+      - { name: capacityLiters, label: Dung tích lít, type: number }
+
+      - name: specs
+        label: Thông số kỹ thuật
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Tên thông số, type: string }
+          - { name: value, label: Giá trị, type: string }
+
+      - name: categories
+        label: Danh mục nguồn
+        type: object
+        list: true
+        readonly: true
+        fields:
+          - { name: key, type: string }
+          - { name: name, type: string }
+          - { name: sourceUrl, type: string }
+
+      - name: images
+        label: Hình ảnh hiện tại
+        type: object
+        list: true
+        readonly: true
+        fields:
+          - { name: localPath, label: Hình ảnh, type: image }
+          - { name: alt, label: Mô tả ảnh, type: string }
+          - { name: sourceUrl, type: string }
+          - { name: width, type: number }
+          - { name: height, type: number }
+          - { name: bytes, type: number }
+
+      - { name: sourceUrl, type: string, readonly: true }
+      - { name: sourceStatus, type: string, readonly: true }
+      - { name: sourceName, type: string, readonly: true }
+      - { name: stockStatus, type: string, readonly: true }
+      - { name: priceSource, type: string, readonly: true }
+      - { name: notes, type: string, list: true, readonly: true }
+
+      - name: variants
+        type: object
+        list: true
+        readonly: true
+        fields:
+          - { name: id, type: string }
+          - { name: name, type: string }
+          - { name: price, type: number }
